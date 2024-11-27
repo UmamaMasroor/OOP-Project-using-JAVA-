@@ -8,7 +8,7 @@ class LoginScreen {
     public LoginScreen() {
         frame = new JFrame("Login");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 300);
+        frame.setSize(600, 700);
         frame.getContentPane().setBackground(Color.PINK);
         frame.setLayout(new GridBagLayout()); // Use GridBagLayout to center components
 
@@ -19,24 +19,29 @@ class LoginScreen {
 
         // Username Label
         JLabel usernameLabel = new JLabel("Username:");
+        usernameLabel.setFont(new Font("Arial", Font.BOLD, 18 ));
+//      usernameLabel.setForeground(Color.WHITE);
+
         gbc.gridx = 0;
         gbc.gridy = 0;
         frame.add(usernameLabel, gbc);
 
         // Username Field
-        JTextField usernameField = new JTextField(20);
+        JTextField usernameField = new JTextField(30);
         gbc.gridx = 1;
         gbc.gridy = 0;
         frame.add(usernameField, gbc);
 
         // Password Label
         JLabel passwordLabel = new JLabel("Password:");
+        passwordLabel.setFont(new Font("Arial", Font.BOLD, 18));
+//        passwordLabel.setForeground(Color.WHITE);
         gbc.gridx = 0;
         gbc.gridy = 1;
         frame.add(passwordLabel, gbc);
 
         // Password Field
-        JPasswordField passwordField = new JPasswordField(20);
+        JPasswordField passwordField = new JPasswordField(30);
         gbc.gridx = 1;
         gbc.gridy = 1;
         frame.add(passwordField, gbc);

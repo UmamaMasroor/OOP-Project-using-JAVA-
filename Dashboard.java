@@ -14,6 +14,10 @@ class DashboardScreen {
         frame.setSize(800, 600);
         frame.setLayout(new BorderLayout());
 
+//        JLabel backgroundLabel = new JLabel(new ImageIcon("D:/OOP-Project-using-JAVA/images/src/signup.jpg"));
+//        backgroundLabel.setLayout(new BorderLayout()); // Allow components to be added over the background
+//        frame.setContentPane(backgroundLabel);
+
         // Welcome label
         JLabel welcomeLabel = new JLabel("Welcome, " + user.name + "!", JLabel.CENTER);
         welcomeLabel.setFont(new Font("Arial", Font.BOLD, 18));
