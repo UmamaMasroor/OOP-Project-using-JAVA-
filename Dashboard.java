@@ -6,6 +6,7 @@ class DashboardScreen {
     JFrame frame;
     JPanel contentPanel;
 
+
     public DashboardScreen(User user) {
         // Create main frame
         frame = new JFrame("Dashboard - Tourism Management System");
@@ -40,14 +41,17 @@ class DashboardScreen {
         contentPanel.add(createWelcomePanel(), "Welcome"); // Default welcome panel
         frame.add(contentPanel, BorderLayout.CENTER);
 
+
         frame.setVisible(true);
     }
 
     // Create welcome panel
     private JPanel createWelcomePanel() {
         JPanel panel = new JPanel();
+        panel.setBackground(Color.PINK);
         panel.setLayout(new BorderLayout());
         JLabel label = new JLabel("Welcome to the Tourism Management System!", JLabel.CENTER);
+        frame.getContentPane().setBackground(Color.LIGHT_GRAY);
         label.setFont(new Font("Arial", Font.BOLD, 20));
         panel.add(label, BorderLayout.CENTER);
         return panel;

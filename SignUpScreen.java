@@ -10,7 +10,7 @@ class SignupScreen {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 400);
         frame.setLayout(null);
-        frame.getContentPane().setBackground(Color.CYAN);
+        frame.getContentPane().setBackground(Color.PINK);
 //        ImageIcon backgroundImage = new ImageIcon("D:/OOP-Project-using-JAVA/images/src/signup.jpg");
 //        JLabel backgroundLabel = new JLabel(backgroundImage);
 //        backgroundLabel.setBounds(0, 0, 400, 400);

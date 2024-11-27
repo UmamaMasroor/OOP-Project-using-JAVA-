@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 // Login Screen
 class LoginScreen {
@@ -8,32 +9,52 @@ class LoginScreen {
         frame = new JFrame("Login");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 300);
-        frame.setLayout(null);
+        frame.getContentPane().setBackground(Color.PINK);
+        frame.setLayout(new GridBagLayout()); // Use GridBagLayout to center components
 
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(5, 5, 5, 5); // Add padding around components
+        gbc.anchor = GridBagConstraints.CENTER;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+
+        // Username Label
         JLabel usernameLabel = new JLabel("Username:");
-        usernameLabel.setBounds(50, 50, 100, 30);
-        frame.add(usernameLabel);
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        frame.add(usernameLabel, gbc);
 
-        JTextField usernameField = new JTextField();
-        usernameField.setBounds(150, 50, 200, 30);
-        frame.add(usernameField);
+        // Username Field
+        JTextField usernameField = new JTextField(20);
+        gbc.gridx = 1;
+        gbc.gridy = 0;
+        frame.add(usernameField, gbc);
 
+        // Password Label
         JLabel passwordLabel = new JLabel("Password:");
-        passwordLabel.setBounds(50, 100, 100, 30);
-        frame.add(passwordLabel);
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        frame.add(passwordLabel, gbc);
 
-        JPasswordField passwordField = new JPasswordField();
-        passwordField.setBounds(150, 100, 200, 30);
-        frame.add(passwordField);
+        // Password Field
+        JPasswordField passwordField = new JPasswordField(20);
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        frame.add(passwordField, gbc);
 
+        // Buttons Panel
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setBackground(Color.PINK); // Match the frame background
         JButton loginButton = new JButton("Login");
-        loginButton.setBounds(150, 150, 100, 30);
-        frame.add(loginButton);
-
         JButton signupButton = new JButton("Sign Up");
-        signupButton.setBounds(260, 150, 100, 30);
-        frame.add(signupButton);
+        buttonPanel.add(loginButton);
+        buttonPanel.add(signupButton);
 
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 2;
+        frame.add(buttonPanel, gbc);
+
+        // Button Listeners
         loginButton.addActionListener(e -> {
             String username = usernameField.getText();
             String password = new String(passwordField.getPassword());
@@ -56,4 +77,3 @@ class LoginScreen {
         frame.setVisible(true);
     }
 }
-
