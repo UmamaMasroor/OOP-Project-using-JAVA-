@@ -80,39 +80,33 @@ class DashboardScreen {
             }
         }
 
-        if (!panelExists) {
-            JPanel newPanel = createFormPanel(action);
-            newPanel.setName(action); // Assign a name to the panel
-            contentPanel.add(newPanel, action); // Add the new panel dynamically
-        }
-
 
         cl.show(contentPanel, action); // Show selected panel
     }
 
-    // Create form panels for each section dynamically
-    private JPanel createFormPanel(String formName) {
-        JPanel panel = new JPanel(new GridLayout(5, 2, 10, 10));
-        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-
-        JLabel titleLabel = new JLabel(formName, JLabel.CENTER);
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 18));
-        panel.add(titleLabel);
-
-        // Example fields for demonstration
-        JLabel label1 = new JLabel("Field 1:");
-        JTextField textField1 = new JTextField();
-        JLabel label2 = new JLabel("Field 2:");
-        JTextField textField2 = new JTextField();
-        JButton submitButton = new JButton("Submit");
-
-        panel.add(label1);
-        panel.add(textField1);
-        panel.add(label2);
-        panel.add(textField2);
-        panel.add(new JLabel()); // Spacer
-        panel.add(submitButton);
-
-        return panel;
+        // Create form panels for each section dynamically
+//    private JPanel createFormPanel(String formName) {
+//        JPanel panel = new JPanel(new GridLayout(5, 2, 10, 10));
+//        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+//
+//        JLabel titleLabel = new JLabel(formName, JLabel.CENTER);
+//        titleLabel.setFont(new Font("Arial", Font.BOLD, 18));
+//        panel.add(titleLabel);
+//
+//        // Example fields for demonstration
+//        JLabel label1 = new JLabel("Field 1:");
+//        JTextField textField1 = new JTextField();
+//        JLabel label2 = new JLabel("Field 2:");
+//        JTextField textField2 = new JTextField();
+//        JButton submitButton = new JButton("Submit");
+//
+//        panel.add(label1);
+//        panel.add(textField1);
+//        panel.add(label2);
+//        panel.add(textField2);
+//        panel.add(new JLabel()); // Spacer
+//        panel.add(submitButton);
+//
+//        return panel;
+//    }
     }
-}
